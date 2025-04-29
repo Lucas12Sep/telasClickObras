@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel Parceiro</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Barra lateral */
+    .sidebar {
+      width: 240px;
+      background-color: #002b5b;
+      color: white;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      padding-left: 0;
+    }
+
+    .sidebar img {
+      width: 160px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+
+    .sidebar a {
+      width: 100%;
+      text-align: left;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      transition: background 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a:hover {
+      background-color: #ff6600;
+    }
+
+    /* Conteúdo principal */
+    .main-content {
+      margin-left: 240px;
+      padding: 20px;
+      flex-grow: 1;
+    }
+
+    .main-content h1 {
+      color: #002b5b;
+    }
+
+    /* Telas para navegação */
+    .tela {
+      display: none;
+    }
+
+    .tela.ativo {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra lateral com logo -->
+  <div class="sidebar">
+    <img src="logo_clickobra_1 fundo branco.png" alt="Logo ClickObra" />
+    <h2>Parceiro</h2>
+    <a href="#" onclick="mostrarTela('servicos-disponiveis')">Serviços Disponíveis</a>
+    <a href="#" onclick="mostrarTela('servicos')">Serviços</a>
+    <a href="#" onclick="mostrarTela('notificacoes')">Notificações</a>
+    <a href="#" onclick="mostrarTela('perfil')">Gestão de Perfil</a>
+    <a href="#" onclick="mostrarTela('financeiro')">Financeiro</a>
+    <a href="#" onclick="mostrarTela('funcoes')">Funções Gerais</a>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="main-content">
+    <div id="servicos-disponiveis" class="tela ativo">
+      <h1>Serviços Disponíveis</h1>
+      <p>Visualize os serviços disponíveis na sua região.</p>
+      <button><a href="#mapa-servicos">Ver no Mapa</a></button>
+    </div>
+
+    <div id="servicos" class="tela">
+      <h1>Serviços</h1>
+      <p>Gerencie os serviços em andamento, finalizados ou cancelados.</p>
+      <button><a href="#servicos-em-andamento">Ver Serviços</a></button>
+    </div>
+
+    <div id="notificacoes" class="tela">
+      <h1>Notificações</h1>
+      <p>Novas Solicitações: 2</p>
+      <p><a href="#notificacoes">Ver Notificações</a></p>
+    </div>
+
+    <div id="perfil" class="tela">
+      <h1>Gestão de Perfil</h1>
+      <p>Atualize seu perfil, foto, descrição e especialidades.</p>
+      <button><a href="#editar-perfil">Editar Perfil</a></button>
+    </div>
+
+    <div id="financeiro" class="tela">
+      <h1>Financeiro</h1>
+      <p>Pagamentos Pendentes: R$ 2.000,00</p>
+      <p><a href="#historico-pagamentos">Ver Histórico de Pagamentos</a></p>
+      <p>Faturamento Atual: R$ 5.500,00</p>
+    </div>
+
+    <div id="funcoes" class="tela">
+      <h1>Funções Gerais</h1>
+      <button><a href="#LGPD-e-termos-de-condições-e-uso">Termos de condições e uso</a></button>
+      <button><a href="#ajustes-gerais">Ajustes Gerais</a></button>
+    </div>
+  </div>
+
+  <script>
+    // Função para alternar as telas
+    function mostrarTela(tela) {
+      const telas = document.querySelectorAll('.tela');
+      telas.forEach(t => t.classList.remove('ativo'));
+      document.getElementById(tela).classList.add('ativo');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ClickObra - Acesso</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="logo-header">
+      <img src="logo_clickobra_1 (1).png" alt="ClickObra Logo" class="logo" />
+      <h1>Selecione</h1>
+    </div>
+
+    <div class="select-profile">
+      <button onclick="selectProfile('cliente')">Sou Cliente</button>
+      <button onclick="selectProfile('parceiro')">Sou Parceiro</button>
+    </div>
+
+    <div class="login-form" id="loginForm" style="display: none;">
+      <h2>Login</h2>
+      <form onsubmit="return loginUser()">
+        <input type="text" id="cpf" placeholder="CPF" required />
+        <input type="password" id="senha" placeholder="Senha" required />
+        <button type="submit">Entrar</button>
+      </form>
+      <button onclick="goBack()" class="back-button">← Voltar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  <script src="script.js"></script>
+</body>
+</html>

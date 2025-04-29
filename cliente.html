@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel Parceiro</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Painel Lateral */
+    .sidebar {
+      width: 240px;
+      background-color: #002b5b;
+      color: white;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      transition: background 0.3s;
+      margin-bottom: 10px;
+    }
+
+    .sidebar a:hover {
+      background-color: #ff6600;
+    }
+
+    /* Conteúdo principal */
+    .main-content {
+      margin-left: 240px; /* Deixa espaço para o painel */
+      padding: 20px;
+      flex-grow: 1; /* Faz o conteúdo principal preencher o espaço restante */
+    }
+
+    .main-content h1 {
+      color: #002b5b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Painel Lateral -->
+  <div class="sidebar">
+    <h2>ClickObra</h2>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#buscar">Buscar Profissionais</a>
+    <a href="#servicos">Acompanhar Serviços</a>
+    <a href="#chat">Chat</a>
+    <a href="#orcamentos">Solicitar Orçamentos</a>
+    <a href="#avaliacoes">Avaliar Profissionais</a>
+    <a href="#perfil">Perfil</a>
+    <a href="index.html">Sair</a>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div class="main-content">
+    <h1>Bem-vindo!</h1>
+    <p>Escolha uma das opções no menu para começar.</p>
+    <!-- Aqui entrarão as seções dinâmicas -->
+  </div>
+</body>
+</html>
